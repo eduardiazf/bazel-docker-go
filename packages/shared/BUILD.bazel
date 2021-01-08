@@ -1,0 +1,14 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "shared",
+    srcs = ["sum.go"],
+    importpath = "bairesapp/packages/shared",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "shared_test",
+    srcs = ["sum_test.go"],
+    embed = [":shared"],
+)

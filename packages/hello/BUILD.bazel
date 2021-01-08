@@ -1,0 +1,30 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+load("@io_bazel_rules_docker//go:image.bzl", "go_image")
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
+
+# Included binary in docker container
+go_image(
+    name = "docker",
+    base = ":image",
+    embed = [":hello_lib"],
+)
+
+# Docker container
+container_image(
+    name = "image",
+    base = "@alpine_linux_amd64//image"
+)
+
+go_library(
+    name = "hello_lib",
+    srcs = ["main.go"],
+    importpath = "bairesapp/packages/hello",
+    visibility = ["//visibility:private"],
+    deps = ["//packages/shared"],
+)
+
+go_binary(
+    name = "hello",
+    embed = [":hello_lib"],
+    visibility = ["//visibility:public"],
+)
