@@ -67,13 +67,13 @@ func  TestSum(t *testing.T) {
 	}
 }
 ```
->We now configure the root BUILD.bazel
+>Configure the root BUILD.bazel
 ```
 load("@bazel_gazelle//:def.bzl", "gazelle")
 # gazelle:prefix bairesapp
 gazelle(name = "gazelle")
 ```
->We now configure the WORKSPACE
+>Configure the WORKSPACE
 ```
 workspace(name = "bairesapp")
 
