@@ -21,7 +21,7 @@ Bazel helps you scale your organization, codebase and Continuous Integration sys
 You can build and test multiple languages with a single tool in a monorail
 
 ---
-### Primeros pasos
+### First Steps
 >We created a project in Go with these commands:
 ```
 mkdir -p bazel-docker-go
