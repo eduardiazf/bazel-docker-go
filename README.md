@@ -28,6 +28,7 @@ mkdir -p bazel-docker-go
 go mod init bairesapp
 ```
 >We create the directories according to the image.
+
 ![directories](https://github.com/eduardiazf/bazel-docker-go/blob/main/images/bazel-golang-docker-directories.PNG?raw=true)
 
 >packages/hello/main.go
