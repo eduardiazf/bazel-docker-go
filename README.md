@@ -11,23 +11,23 @@ Binary building and dependency management is one of the most frustrating parts o
 Bazel is a free software tool that allows the automation of software construction and testing.
 
 ### Why Bazel?
-<strong>Speed up your builds and tests</strong>
+<strong>Speed up your builds and tests:</strong>
 With advanced local and distributed caching, optimized dependency analysis and parallel execution, you get fast and incremental compilations.
 
-<strong>Scalable</strong>
+<strong>Scalable:</strong>
 Bazel helps you scale your organization, codebase and Continuous Integration system. It handles codebases of any size, in multiple repositories or a huge monorepo.
 
-<strong>One tool, multiple languages</strong>
+<strong>One tool, multiple languages:</strong>
 You can build and test multiple languages with a single tool in a monorail
 
 ---
 ### First Steps
->We created a project in Go with these commands:
+>We will create a project in Go with these commands:
 ```
 mkdir -p bazel-docker-go
 go mod init bairesapp
 ```
->We create the directories according to the image.
+>We will create the directories according to the image.
 
 ![directories](https://github.com/eduardiazf/bazel-docker-go/blob/main/images/bazel-golang-docker-directories.PNG?raw=true)
 
@@ -36,9 +36,9 @@ go mod init bairesapp
 package main
 
 import (
-"bairesapp/packages/shared"
+    "bairesapp/packages/shared"
 
-"fmt"
+    "fmt"
 )
 
 func  main() {
