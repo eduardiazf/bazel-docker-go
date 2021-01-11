@@ -140,12 +140,12 @@ load("@io_bazel_rules_docker//go:image.bzl", _go_image_repos = "repositories")
 
 _go_image_repos()
 ```
-Now you can run the following code to generate BUILD.bazel
+Now, you can run the following code to generate BUILD.bazel
 
 ```
 bazel run //:gazelle
 ```
-This will create our BUILD.bazel and we can use it to update it.
+This will create our BUILD.bazel and we can also use it to update it.
 
 >packages/hello/BUILD.bazel
 
