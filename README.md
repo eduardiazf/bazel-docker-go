@@ -181,7 +181,7 @@ go_binary(
 	visibility = ["//visibility:public"],
 )
 ```
-###  Comando utiles
+###  Useful commands
 > run go binary
 ```
 bazel run //packages/hello:hello
